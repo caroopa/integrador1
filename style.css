@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Smooch&family=Source+Sans+Pro:wght@300&display=swap');
+
+:root {
+	--color-primario: #F25C84;
+	--color-secundario: white;
+	--color-terciario: #D3D9C7;
+	--color-cuarto: #8e4162;
+	--color-quinto: #41393e;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 7rem;
+}
+
+h2 {
+	font-size: 3rem;
+}
+
+button {
+	border: none;
+}
+
+/* ******************************* */
+/* HEADER */
+/* ******************************* */
+
+header {
+	background: url(fondo.jpg) no-repeat center center;
+	background-size: cover;	
+	/* background-color: red; */
+	height: 80vh;
+	color: var(--color-secundario);
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+/* .nav {
+	order: 3;
+} */
+
+ul {
+	width: 50%;
+	display: flex;
+	justify-content: space-around;
+	margin: 1.5rem;
+	font-size: 1.5rem;
+}
+
+li {
+	list-style: none;
+}
+
+li a:link {
+	color: var(--color-quinto);
+}
+
+li a:hover {
+	color: var(--color-primario);
+}
+
+/* presentación */
+
+.logo2 {
+	height: 5rem;
+	width: 7rem;
+}
+
+#barras {
+	display: none;
+}
+
+.logo {
+	position: absolute;
+	z-index: 1;
+	height: 600px;
+	margin: 5rem 10rem;
+}
+
+/* slides */
+
+@keyframes slide {
+	0% { transform: translateX(0); }
+	25% { transform: translateX(0); }
+
+	50% { transform: translateX(-100%); }
+	75% { transform: translateX(-100%); }
+}
+
+.slides {
+	position: relative;
+	display: flex;
+	overflow: hidden;
+}
+
+.slide {
+	width: 100vw;
+	animation-name: slide;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: alternate;
+}
+
+.slides:hover .slide {
+	animation-play-state: paused;
+}
+
+/* botones */
+
+.botones {
+	width: 30rem;
+}
+
+.btn-login, .btn-register {
+	width: 130px;
+	height: 40px;
+	color: var(--color-secundario);
+	font-family: 'Source Sans Pro', sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-radius: 5px;
+}
+
+.btn-login {
+	background-color: var(--color-primario);
+}
+
+.btn-register {
+	background-color: var(--color-cuarto);
+}
+
+@media screen and (max-width: 1000px) {
+	.nav {
+		display: none;
+	}
+
+	#barras {
+		font-size: 2rem;
+		margin: 1.5rem;
+		display: block;
+		color: var(--color-primario);
+	}
+}
+
+/* ******************************* */
+/* ABOUT */
+/* ******************************* */
