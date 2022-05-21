@@ -46,11 +46,8 @@ header {
 nav {
 	display: flex;
 	justify-content: space-between;
+	position: sticky;
 }
-
-/* .nav {
-	order: 3;
-} */
 
 ul {
 	width: 50%;
@@ -74,15 +71,6 @@ li a:hover {
 
 /* presentación */
 
-.logo2 {
-	height: 5rem;
-	width: 7rem;
-}
-
-#barras {
-	display: none;
-}
-
 .logo {
 	position: absolute;
 	z-index: 1;
@@ -90,20 +78,30 @@ li a:hover {
 	margin: 5rem 10rem;
 }
 
+.logo2 {
+	height: 5rem;
+	width: 7rem;
+}
+
+#check {
+	display: none;
+}
+
 /* slides */
 
-@keyframes slide {
+/* @keyframes slide {
 	0% { transform: translateX(0); }
 	25% { transform: translateX(0); }
 
 	50% { transform: translateX(-100%); }
 	75% { transform: translateX(-100%); }
-}
+} */
 
 .slides {
 	position: relative;
 	display: flex;
 	overflow: hidden;
+	z-index: -1;
 }
 
 .slide {
@@ -143,15 +141,64 @@ li a:hover {
 }
 
 @media screen and (max-width: 1000px) {
+	.bar_btn {
+		font-size: 2rem;
+		margin: 1rem;
+		cursor: pointer;
+	}
+
+	.barras {
+		color: var(--color-primario);
+	}
+
 	.nav {
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+		width: 100%;
+		height: 0vh;
+		margin: 5rem 0;
+		background: rgba(0, 0, 0, .95);
+		text-align: center;
+		transition: all .5s;
+	}
+
+	.nav li {
+		display: none;
+		line-height: 30px;
+		margin: 50px;
+		transition: all .5s;
+	}
+
+	.nav li a {
+		color:#8e4162;
+		font-size: 16px;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+
+	.nav li a:hover {
+		color: #F25C84;
+		transition: .3s;
+	}
+
+	#check {
 		display: none;
 	}
 
-	#barras {
-		font-size: 2rem;
-		margin: 1.5rem;
+	#check:checked ~ .nav {
+		height: 100vh;
+	}
+
+	#check:checked ~ .nav li {
 		display: block;
-		color: var(--color-primario);
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.btn-login, .btn-register {
+		width: 50px;
+		margin: 0 1rem;
 	}
 }
 
