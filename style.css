@@ -3,7 +3,7 @@
 :root {
 	--color-primario: #F25C84;
 	--color-secundario: white;
-	--color-terciario: #D3D9C7;
+	--color-terciario: #d9d8c7;
 	--color-cuarto: #8e4162;
 	--color-quinto: #41393e;
 }
@@ -20,7 +20,8 @@ a {
 }
 
 h1 {
-	font-size: 7rem;
+	font-size: 3rem;
+	text-align: center;
 }
 
 h2 {
@@ -31,6 +32,10 @@ button {
 	border: none;
 }
 
+p {
+	font-size: 1.2rem;
+}
+
 /* ******************************* */
 /* HEADER */
 /* ******************************* */
@@ -38,8 +43,6 @@ button {
 header {
 	background: url(fondo.jpg) no-repeat center center;
 	background-size: cover;	
-	/* background-color: red; */
-	height: 80vh;
 	color: var(--color-secundario);
 }
 
@@ -61,7 +64,7 @@ li {
 	list-style: none;
 }
 
-li a:link {
+li a:link, li a:visited {
 	color: var(--color-quinto);
 }
 
@@ -195,11 +198,59 @@ li a:hover {
 
 @media screen and (max-width: 500px) {
 	.btn-login, .btn-register {
-		width: 50px;
+		width: 60px;
 		margin: 0 1rem;
 	}
 }
 
 /* ******************************* */
-/* ABOUT */
+/* SERVICES */
 /* ******************************* */
+
+.services {
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.services_container {
+	display: flex;
+	gap: 2rem;
+	margin: 4rem 2rem;
+	max-width: 1300px;
+}
+
+.services_card {
+	width: 300px;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	border: 1px solid var(--color-terciario);
+	padding: 2rem;
+	border-radius: 3px;
+}
+
+.services_card p {
+	text-align: justify;
+}
+
+.services_card:hover {
+	background-color: var(--color-terciario);
+	transition: 1s ease;
+}
+
+.services_icon {
+	color: var(--color-primario);
+	font-size: 4rem;
+}
+
+@media screen and (max-width: 1000px) {
+	.services_container {
+		flex-direction: column;
+	}
+
+}
