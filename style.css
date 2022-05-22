@@ -30,6 +30,12 @@ h2 {
 
 button {
 	border: none;
+	cursor: pointer;
+}
+
+button:hover {
+	transform: scale(1.02);
+	transition: all 0.3s ease;
 }
 
 p {
@@ -143,6 +149,10 @@ li a:hover {
 	background-color: var(--color-cuarto);
 }
 
+.login:hover {
+	color: var(--color-terciario);
+}
+
 @media screen and (max-width: 1000px) {
 	.bar_btn {
 		font-size: 2rem;
@@ -239,7 +249,15 @@ li a:hover {
 }
 
 .services_card:hover {
-	background-color: var(--color-terciario);
+	background-color: var(--color-primario);
+	transition: 1s ease;
+	border-radius: 15px;
+	color: var(--color-secundario);
+	cursor: pointer;
+}
+
+.services_card:hover > .services_icon {
+	color: var(--color-secundario);
 	transition: 1s ease;
 }
 
