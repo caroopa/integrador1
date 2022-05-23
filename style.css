@@ -217,7 +217,7 @@ li a:hover {
 /* SERVICES */
 /* ******************************* */
 
-.services {
+#services {
 	padding: 3rem;
 	display: flex;
 	flex-direction: column;
@@ -271,4 +271,108 @@ li a:hover {
 		flex-direction: column;
 	}
 
+}
+
+/* ******************************* */
+/* ABOUT */
+/* ******************************* */
+
+#about {
+	background-image: url(./img/fondo.jpg);
+	background-size: cover;
+	color: var(--color-secundario);
+	padding: 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+#about p {
+	max-width: 1000px;
+	text-align: center;
+}
+
+#about button {
+	margin-top: 1rem;
+	width: 200px;
+	height: 60px;
+	color: var(--color-secundario);
+	font-family: 'Source Sans Pro', sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-radius: 5px;
+	background-color: var(--color-primario);
+	font-size: 1.1rem
+}
+
+/* ******************************* */
+/* WORKS */
+/* ******************************* */
+
+#works {
+	padding: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.fotos {
+	display: grid;
+	grid-template-areas: "uno dos tres"
+						"uno cuatro cinco";
+	grid-template-columns: 420px 270px 300px;
+	grid-template-rows: 320px 320px;
+}
+
+.uno {
+	grid-area: uno;
+	width: 400px;
+	height: 620px;
+}
+
+.dos {
+	grid-area: dos;
+}
+
+.tres {
+	grid-area: tres;
+}
+
+.cuatro {
+	grid-area: cuatro;
+}
+
+.cinco {
+	grid-area: cinco;
+}
+
+.foto {
+	width: 250px;
+	height: 300px;
+}
+
+.animada {
+	border: 3px solid var(--color-cuarto);
+}
+
+.animada:hover {
+	transform: scale(1.02);
+	transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1000px) {
+	.fotos {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.uno {
+		width: 250px;
+		height: 300px;	
+	}
 }
