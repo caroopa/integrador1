@@ -55,7 +55,7 @@ header {
 nav {
 	display: flex;
 	justify-content: space-between;
-	position: fixed;
+	position: sticky;
 	top: 0;
 	background-color: var(--color-secundario);
 	width: 100%;
@@ -83,10 +83,6 @@ li a:hover {
 }
 
 /* presentación */
-
-.presentacion {
-	margin-top: 5rem;
-}
 
 .logo {
 	position: absolute;
