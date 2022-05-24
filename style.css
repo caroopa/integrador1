@@ -84,6 +84,10 @@ li a:hover {
 
 /* presentación */
 
+.presentacion {
+	margin-top: 5rem;
+}
+
 .logo {
 	position: absolute;
 	z-index: 1;
