@@ -56,6 +56,7 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	position: fixed;
+	top: 0;
 	background-color: var(--color-secundario);
 	width: 100%;
 	border-bottom: 1px solid var(--color-terciario);
@@ -101,13 +102,13 @@ li a:hover {
 
 /* slides */
 
-/* @keyframes slide {
+@keyframes slide {
 	0% { transform: translateX(0); }
 	25% { transform: translateX(0); }
 
 	50% { transform: translateX(-100%); }
 	75% { transform: translateX(-100%); }
-} */
+}
 
 .slides {
 	position: relative;
@@ -122,10 +123,6 @@ li a:hover {
 	animation-duration: 10s;
 	animation-iteration-count: infinite;
 	animation-timing-function: alternate;
-}
-
-.slides:hover .slide {
-	animation-play-state: paused;
 }
 
 /* botones */
