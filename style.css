@@ -19,6 +19,14 @@ a {
 	text-decoration: none;
 }
 
+a:link, a:visited {
+	color: var(--color-quinto);
+}
+
+a:hover {
+	color: var(--color-primario);
+}
+
 h1 {
 	font-size: 3rem;
 	text-align: center;
@@ -30,7 +38,6 @@ h2 {
 
 button {
 	border: none;
-	cursor: pointer;
 }
 
 button:hover {
@@ -72,24 +79,10 @@ li {
 	list-style: none;
 }
 
-li a:link, li a:visited {
-	color: var(--color-quinto);
-}
-
-li a:hover {
-	color: var(--color-primario);
-}
-
 /* presentación */
 
 .presentacion {
 	margin-top: 5rem;
-}
-
-.logo {
-	position: absolute;
-	height: 600px;
-	margin: 5rem 10rem;
 }
 
 .logo2 {
@@ -438,4 +431,28 @@ input:focus {
 		gap: 0;
 	}
 
+}
+
+/* ******************************* */
+/* FOOTER */
+/* ******************************* */
+
+footer {
+	background-color: black;
+	color: var(--color-secundario);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 5rem;
+	gap: 2rem;
+}
+
+footer p {
+	max-width: 1000px;
+	text-align: center;
+}
+
+.redessociales {
+	font-size: 3rem;
 }
